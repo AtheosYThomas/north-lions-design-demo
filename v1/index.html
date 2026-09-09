@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#163c35">
+  <meta name="description" content="北大獅子會會員入口視覺提案：會員服務、活動與會務消息。">
+  <title>北大獅子會 · 會員會所｜Design Demo</title>
+  <link rel="icon" href="./assets/lions-logo.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <div class="sidebar-shade" id="sidebar-shade" hidden></div>
+  <aside class="sidebar" id="sidebar" aria-label="主要導覽">
+    <a href="#home" class="brand" aria-label="北大獅子會首頁">
+      <img src="./assets/lions-logo.png" alt="獅子會會徽" width="49" height="49">
+      <span><strong>北大獅子會</strong><small>NORTH LIONS CLUB</small></span>
+    </a>
+    <div class="sidebar-heading">會員會所 <span>MEMBER'S LOUNGE</span></div>
+    <nav class="main-nav">
+      <a href="#home" class="nav-link active" aria-current="page"><i data-icon="home"></i>會員首頁<span class="nav-dash"></span></a>
+      <button class="nav-link" data-panel="members"><i data-icon="users"></i>會員名冊</button>
+      <a href="#events" class="nav-link"><i data-icon="calendar"></i>活動與報名<span class="nav-count">3</span></a>
+      <a href="#news" class="nav-link"><i data-icon="megaphone"></i>最新公告</a>
+    </nav>
+    <div class="sidebar-label">我的專屬</div>
+    <nav class="main-nav">
+      <button class="nav-link" data-panel="billing"><i data-icon="wallet"></i>專屬帳單</button>
+      <button class="nav-link" data-panel="receipts"><i data-icon="receipt"></i>專屬收據</button>
+      <button class="nav-link" data-panel="donations"><i data-icon="heart"></i>捐款與繳費明細</button>
+      <button class="nav-link" data-panel="profile"><i data-icon="user"></i>個人設定</button>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="club-motto"><span class="motto-rule"></span><p>We Serve.</p><span>在地連結，讓善意更遠。</span></div>
+      <button class="admin-link" data-panel="admin"><i data-icon="grid"></i>管理後台<i data-icon="external"></i></button>
+      <button class="account" data-panel="profile"><span class="avatar">獅</span><span><strong>示範會員</strong><small>2026–2027 年度會員</small></span><i data-icon="chevron"></i></button>
+    </div>
+  </aside>
+
+  <div class="workspace" id="home">
+    <header class="topbar">
+      <button class="icon-button mobile-menu" id="menu-button" aria-label="展開導覽選單" aria-controls="sidebar" aria-expanded="false"><i data-icon="menu"></i></button>
+      <div class="breadcrumb">會員會所 <span>/</span> <strong>首頁</strong></div>
+      <div class="top-actions"><span class="demo-label">DESIGN DEMO</span><button class="guide-button" data-panel="guide"><i data-icon="help"></i><span>使用指南</span></button><span class="top-divider"></span><button class="icon-button notification" data-panel="notifications" aria-label="通知，2 則新消息"><i data-icon="bell"></i><span class="notification-dot"></span></button><button class="avatar small" data-panel="profile" aria-label="查看個人資料">獅</button></div>
+    </header>
+
+    <main id="main">
+      <section class="welcome" aria-labelledby="welcome-title">
+        <div><p class="eyebrow">A LITTLE CONNECTION. A GREATER IMPACT.</p><h1 id="welcome-title">美好的連結，從這裡開始。</h1><p class="welcome-description">歡迎回來，獅友。一起參與，讓服務走進生活。</p></div>
+        <div class="today"><i data-icon="calendar"></i><div><span>2026 年 9 月 9 日</span><small>星期三 · 秋日好時光</small></div></div>
+      </section>
+
+      <section class="feature-grid" aria-label="本月焦點與會員服務">
+        <article class="hero">
+          <img class="hero-image" src="./assets/mountains.jpg" alt="晨霧之中的層疊青山" width="1400" height="900" fetchpriority="high">
+          <div class="hero-tint"></div>
+          <div class="hero-top"><span class="hero-tag">九月・一起出發</span><span class="hero-edition">THE NORTH JOURNAL / 09</span></div>
+          <div class="hero-content"><p class="hero-kicker">TOGETHER, WE SERVE.</p><h2>因為有你，<br>讓美好持續發生。</h2><p>每一次相聚，都是改變的起點。</p><a class="light-button" href="#events">探索本月活動<i data-icon="arrow"></i></a></div>
+          <div class="hero-bottom"><span>北大獅子會 · 服務與友誼同行</span><span class="hero-page">01 <span>/</span> 01</span></div>
+        </article>
+
+        <article class="member-card">
+          <div class="member-card-top"><span class="eyebrow">YOUR MEMBERSHIP</span><i data-icon="sparkle"></i></div>
+          <div><p class="member-salutation">獅友，歡迎回來。</p><h2>屬於你的<br>北大日常。</h2></div>
+          <div class="member-stats"><button data-panel="my-events"><strong>02<span>場</span></strong><span>已報名活動<i data-icon="chevron"></i></span></button><button data-panel="billing"><strong>01<span>筆</span></strong><span>待處理帳單<i data-icon="chevron"></i></span></button></div>
+          <button class="member-card-footer" data-panel="profile"><span>查看我的會員資料</span><i data-icon="arrow"></i></button>
+        </article>
+      </section>
+
+      <section class="services" aria-label="常用服務">
+        <button class="service" data-panel="members"><span class="service-icon"><i data-icon="users"></i></span><span><strong>會員名冊</strong><small>認識一起同行的獅友</small></span><i data-icon="diagonal"></i></button>
+        <a class="service" href="#events"><span class="service-icon"><i data-icon="calendar"></i></span><span><strong>活動報名</strong><small>為下一次相聚留個位置</small></span><i data-icon="diagonal"></i></a>
+        <button class="service" data-panel="billing"><span class="service-icon"><i data-icon="wallet"></i></span><span><strong>專屬帳單</strong><small>會費與繳費狀態一覽</small></span><i data-icon="diagonal"></i></button>
+        <button class="service" data-panel="receipts"><span class="service-icon"><i data-icon="receipt"></i></span><span><strong>專屬收據</strong><small>每一份支持，都有紀錄</small></span><i data-icon="diagonal"></i></button>
+      </section>
+
+      <div class="updates-grid">
+        <section class="events-section" id="events" aria-labelledby="events-title">
+          <div class="section-heading"><div><p class="eyebrow">GET TOGETHER</p><h2 id="events-title">下一場，與你相見<span class="section-count">03</span></h2></div><button class="text-button" data-panel="all-events">所有活動<i data-icon="arrow"></i></button></div>
+          <div class="filters" role="group" aria-label="活動類型"><button class="filter active" data-filter="all" aria-pressed="true">全部活動</button><button class="filter" data-filter="meeting" aria-pressed="false">例會</button><button class="filter" data-filter="service" aria-pressed="false">公益服務</button><button class="filter" data-filter="social" aria-pressed="false">獅友情誼</button></div>
+          <div class="event-list" id="event-list">
+            <button class="event-row" data-category="meeting" data-event="meeting"><span class="event-date"><small>SEP</small><strong>18</strong><span>星期五</span></span><span class="event-info"><span class="event-tags"><span class="category">每月例會</span><span class="open-label">報名開放中</span></span><strong>九月例會・把好事聚在一起</strong><span class="event-meta"><span><i data-icon="clock"></i>18:30–21:00</span><span><i data-icon="pin"></i>三峽北大特區</span></span></span><span class="event-end"><span class="tiny-avatars"><b>獅</b><b>友</b><b>＋</b></span><span class="round-arrow"><i data-icon="arrow"></i></span></span></button>
+            <button class="event-row" data-category="service" data-event="service"><span class="event-date olive"><small>SEP</small><strong>26</strong><span>星期六</span></span><span class="event-info"><span class="event-tags"><span class="category">公益服務</span><span class="open-label">報名開放中</span></span><strong>用一個上午，讓社區更美好</strong><span class="event-meta"><span><i data-icon="clock"></i>09:00–12:00</span><span><i data-icon="pin"></i>三峽社區</span></span></span><span class="event-end"><span class="tiny-avatars"><b>獅</b><b>友</b><b>＋</b></span><span class="round-arrow"><i data-icon="arrow"></i></span></span></button>
+            <button class="event-row" data-category="social" data-event="social"><span class="event-date forest"><small>OCT</small><strong>04</strong><span>星期日</span></span><span class="event-info"><span class="event-tags"><span class="category">獅友情誼</span><span class="open-label">報名開放中</span></span><strong>走進山裡・獅友秋日散步</strong><span class="event-meta"><span><i data-icon="clock"></i>08:30–11:30</span><span><i data-icon="pin"></i>三峽近郊步道</span></span></span><span class="event-end"><span class="tiny-avatars"><b>獅</b><b>友</b><b>＋</b></span><span class="round-arrow"><i data-icon="arrow"></i></span></span></button>
+          </div>
+          <p class="filter-result sr-only" id="filter-result" aria-live="polite"></p>
+        </section>
+
+        <section class="news-section" id="news" aria-labelledby="news-title">
+          <div class="section-heading"><div><p class="eyebrow">CLUB NOTES</p><h2 id="news-title">會裡的新鮮事</h2></div><button class="icon-button" data-panel="announcements" aria-label="查看所有公告"><i data-icon="arrow"></i></button></div>
+          <div class="news-list"><button class="news-item" data-announcement="year"><span class="news-meta"><span class="news-type pinned">會務公告</span><time datetime="2026-09-08">09.08</time></span><strong>新年度，一起寫下新的服務篇章</strong><p>2026–2027 年度會務與活動規劃</p><span class="news-read">閱讀公告<i data-icon="diagonal"></i></span></button><button class="news-item" data-announcement="fee"><span class="news-meta"><span class="news-type">繳費提醒</span><time datetime="2026-09-05">09.05</time></span><strong>本期會費繳納與收據申請說明</strong><p>繳費資訊與申請方式，一次看懂。</p></button><button class="news-item" data-announcement="profile"><span class="news-meta"><span class="news-type">會員服務</span><time datetime="2026-09-01">09.01</time></span><strong>別忘了，更新你的聯絡資訊</strong><p>讓每一則重要消息，都能找到你。</p></button></div>
+        </section>
+      </div>
+      <footer class="page-footer"><span>北大獅子會 <span class="footer-divider">/</span> WE SERVE, TOGETHER.</span><span>視覺提案 · 所有人物、活動與金額皆為示意</span></footer>
+    </main>
+  </div>
+
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="eyebrow" id="dialog-kicker">MEMBER'S LOUNGE</span><button class="icon-button" id="dialog-close" aria-label="關閉視窗"><i data-icon="close"></i></button></div><div id="dialog-content"></div><div class="dialog-note"><i data-icon="info"></i><span>互動展示使用示意資料，操作僅於本頁預覽。</span></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6337ef">
+  <meta name="description" content="北大獅子會會員入口第二版：一起，把好事放大。">
+  <title>NORTH LIONS / 一起，把好事放大。｜Demo 02</title>
+  <link rel="icon" href="./assets/lions-logo.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <div class="sidebar-shade" id="sidebar-shade" hidden></div>
+  <header class="site-header" id="home">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="北大獅子會首頁"><img src="./assets/lions-logo.png" alt="獅子會會徽" width="45" height="45"><span><strong>NORTH LIONS<span class="brand-period">.</span></strong><small>北大獅子會 · 會員俱樂部</small></span></a>
+      <nav class="main-nav" id="sidebar" aria-label="主要導覽"><a class="active" href="#home" aria-current="page">首頁</a><button data-panel="members">會員名冊</button><a href="#events">活動報名<span class="nav-count">3</span></a><a href="#news">最新公告</a><button data-panel="donations">捐款明細</button><button class="mobile-extra" data-panel="admin">管理後台</button><button class="mobile-extra" data-panel="guide">使用指南</button></nav>
+      <div class="header-tools"><button class="icon-button notification" data-panel="notifications" aria-label="通知，2 則新消息"><i data-icon="bell"></i><span class="notification-dot"></span></button><button class="profile-button" data-panel="profile"><span class="avatar">獅</span><span>示範會員</span><i data-icon="chevron"></i></button><button class="icon-button mobile-menu" id="menu-button" aria-controls="sidebar" aria-expanded="false" aria-label="展開導覽選單"><i data-icon="menu"></i></button></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="welcome" aria-labelledby="welcome-title"><div><p class="eyebrow"><span class="welcome-mark">✳</span> YOUR PEOPLE. YOUR PLACE.</p><h1 id="welcome-title">嗨，獅友。今天，一起精彩。</h1></div><div class="edition"><span class="edition-label">MEMBERS EDITION <b>02</b></span><span>2026.09.09 <span class="edition-slash">/</span> WEDNESDAY</span></div></section>
+
+    <div class="hero-grid">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-art" src="./assets/chrome-connection.png" alt="交織的銀色金屬結與萊姆黃球體，象徵連結與合作" width="1536" height="1024" fetchpriority="high">
+        <div class="hero-wash"></div>
+        <div class="hero-top"><span class="hero-label">WE SERVE. WE CONNECT.</span><span class="hero-tag">2026 — 2027</span></div>
+        <div class="hero-content"><h2 id="hero-title">一起，<br>把好事<span class="lime-word">放大。</span></h2><p>有你參與，日常就有不一樣的可能。</p><a class="lime-button" href="#events"><span>找到下一場相聚</span><i data-icon="diagonal"></i></a></div>
+        <div class="hero-footer"><span>NORTH LIONS CLUB</span><span>GOOD PEOPLE. GREAT THINGS.</span></div>
+      </section>
+
+      <aside class="member-card" aria-labelledby="member-title">
+        <div class="member-top"><span class="eyebrow">YOUR CLUB PASS</span><i data-icon="external"></i></div>
+        <div class="pass-header"><span class="pass-avatar">N<span>✳</span></span><div><h2 id="member-title">示範會員</h2><p>很高興，這裡有你。</p></div></div>
+        <div class="member-stats"><button data-panel="my-events"><strong>02<span>場</span></strong><span>我的活動<i data-icon="diagonal"></i></span></button><button data-panel="billing"><strong>01<span>筆</span></strong><span>待處理帳單<i data-icon="diagonal"></i></span></button></div>
+        <button class="next-date" data-event="meeting"><span class="next-date-label">NEXT UP / 下一場相聚</span><span><b>09.18</b><span>九月例會<br><small>18:30 · 三峽北大特區</small></span><i data-icon="arrow"></i></span></button>
+        <div class="ticket-edge" aria-hidden="true"></div>
+        <button class="pass-bottom" data-panel="profile"><span class="pass-code" aria-hidden="true">NL / 2026</span><span>我的會員資料<i data-icon="arrow"></i></span></button>
+      </aside>
+    </div>
+
+    <section class="services" aria-label="常用會員服務">
+      <button class="service lavender" data-panel="members"><span class="service-top"><span>01 / PEOPLE</span><i data-icon="diagonal"></i></span><span class="service-bottom"><span><strong>會員名冊</strong><small>你的獅友，都在這裡。</small></span><i data-icon="users"></i></span></button>
+      <a class="service lime" href="#events"><span class="service-top"><span>02 / GET TOGETHER</span><i data-icon="diagonal"></i></span><span class="service-bottom"><span><strong>活動報名</strong><small>下一場，留個位置給你。</small></span><i data-icon="calendar"></i></span></a>
+      <button class="service peach" data-panel="billing"><span class="service-top"><span>03 / ALL SORTED</span><i data-icon="diagonal"></i></span><span class="service-bottom"><span><strong>專屬帳單</strong><small>會費與明細，輕鬆搞定。</small></span><i data-icon="wallet"></i></span></button>
+      <button class="service ink" data-panel="receipts"><span class="service-top"><span>04 / WELL KEPT</span><i data-icon="diagonal"></i></span><span class="service-bottom"><span><strong>專屬收據</strong><small>每一份支持，好好收藏。</small></span><i data-icon="receipt"></i></span></button>
+    </section>
+
+    <div class="lower-grid">
+      <section class="events-section" id="events" aria-labelledby="events-title">
+        <div class="section-heading"><div><p class="eyebrow">MAKE SOME GOOD PLANS</p><h2 id="events-title">最近，有好事<span class="title-asterisk">✳</span></h2></div><button class="text-button" data-panel="all-events">全部活動<i data-icon="arrow"></i></button></div>
+        <div class="filters" role="group" aria-label="活動類型"><button class="filter active" data-filter="all" aria-pressed="true">全部活動<span>03</span></button><button class="filter" data-filter="meeting" aria-pressed="false">例會</button><button class="filter" data-filter="service" aria-pressed="false">公益服務</button><button class="filter" data-filter="social" aria-pressed="false">獅友情誼</button></div>
+        <div class="event-list">
+          <button class="event-card" data-category="meeting" data-event="meeting"><span class="event-poster meeting-poster"><span class="poster-top"><span>MONTHLY MEETUP</span><i data-icon="diagonal"></i></span><span class="poster-date">09<span>/</span>18</span><span class="poster-bottom"><span>FRIDAY NIGHT</span><span class="poster-caption">一起坐坐。</span></span></span><span class="event-body"><span class="event-meta"><span class="category">每月例會</span><span>18:30–21:00</span></span><strong>把好事聚在一起</strong><span class="event-location"><i data-icon="pin"></i>三峽北大特區<span class="event-status">已加入</span></span></span></button>
+          <button class="event-card" data-category="service" data-event="service"><span class="event-poster service-poster"><span class="poster-top"><span>GIVE A LITTLE LOVE</span><i data-icon="diagonal"></i></span><span class="poster-date">09<span>/</span>26</span><span class="poster-bottom"><span>SATURDAY MORNING</span><span class="poster-caption">一起行動。</span></span></span><span class="event-body"><span class="event-meta"><span class="category">公益服務</span><span>09:00–12:00</span></span><strong>用一個上午，讓社區更美好</strong><span class="event-location"><i data-icon="pin"></i>三峽社區<span class="event-status">已加入</span></span></span></button>
+          <button class="event-card" data-category="social" data-event="social"><span class="event-poster social-poster"><img src="./assets/mountains.jpg" alt="" width="2400" height="1600" loading="lazy"><span class="poster-top"><span>GO OUT. HANG OUT.</span><i data-icon="diagonal"></i></span><span class="poster-date">10<span>/</span>04</span><span class="poster-bottom"><span>SUNDAY WANDER</span><span class="poster-caption">一起走走。</span></span></span><span class="event-body"><span class="event-meta"><span class="category">獅友情誼</span><span>08:30–11:30</span></span><strong>走進山裡・獅友秋日散步</strong><span class="event-location"><i data-icon="pin"></i>三峽近郊步道<span class="event-status open" id="social-status">報名中</span></span></span></button>
+        </div><p class="sr-only" id="filter-result" aria-live="polite"></p>
+      </section>
+
+      <section class="news-section" id="news" aria-labelledby="news-title"><div class="section-heading"><div><p class="eyebrow">ON OUR RADAR</p><h2 id="news-title">會裡大小事</h2></div><button class="icon-button" data-panel="announcements" aria-label="查看全部公告"><i data-icon="diagonal"></i></button></div><div class="news-list"><button class="news-item" data-announcement="year"><span class="news-meta"><span class="news-tag purple">會務公告</span><time datetime="2026-09-08">09.08</time></span><strong>新年度，一起寫下<br>新的服務篇章。</strong><span class="news-footer">2026–2027 年度規劃<i data-icon="arrow"></i></span></button><button class="news-item" data-announcement="fee"><span class="news-meta"><span class="news-tag">繳費提醒</span><time datetime="2026-09-05">09.05</time></span><strong>本期會費與收據，<br>一次搞定。</strong><span class="news-footer">繳費與申請方式<i data-icon="arrow"></i></span></button><button class="news-item compact" data-announcement="profile"><span class="news-meta"><span class="news-tag">會員服務</span><time datetime="2026-09-01">09.01</time></span><strong>聯絡資訊，記得更新一下。</strong><span class="news-footer">讓重要消息都能找到你<i data-icon="arrow"></i></span></button></div></section>
+    </div>
+    <footer class="page-footer"><div class="footer-brand">GOOD PEOPLE.<br><span>GREAT THINGS.</span></div><div class="footer-links"><button data-panel="guide">使用指南<i data-icon="diagonal"></i></button><button data-panel="admin">管理後台<i data-icon="diagonal"></i></button></div><div class="footer-note">NORTH LIONS CLUB © 2026<br>DEMO 02 · 內容與資料皆為示意</div></footer>
+  </main>
+
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="eyebrow" id="dialog-kicker">MEMBER'S LOUNGE</span><button class="icon-button" id="dialog-close" aria-label="關閉視窗"><i data-icon="close"></i></button></div><div id="dialog-content"></div><div class="dialog-note"><i data-icon="info"></i><span>這是互動展示，操作僅於本頁預覽。</span></div></dialog>
+  <div class="toast" id="toast" role="status" hidden></div>
+</body>
+</html>
