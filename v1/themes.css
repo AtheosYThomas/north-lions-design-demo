@@ -1,0 +1,153 @@
+/* Template contract: layout/data remain in index.html + app.js; appearance lives here.
+   The original clubhouse styling remains the default, including when JS is unavailable. */
+:root {
+  --template-surface: #ffffff;
+  --template-panel: #e9eddf;
+  --template-soft: #edf1e8;
+  --template-accent: #79643c;
+  --template-accent-soft: #eae3d3;
+  --template-secondary: #5d7354;
+  --template-on-brand: #f4f5ef;
+  --template-brand-muted: #c6d0c5;
+  --template-radius: 10px;
+  --template-control-radius: 6px;
+  --template-hero-filter: saturate(.56);
+  --template-hero-tint: linear-gradient(90deg,#102b26bf 0%,#17382b38 80%),linear-gradient(0deg,#142f26a8,transparent 40%);
+  --template-shadow: #112d3333;
+  --template-overlay: #112c286b;
+}
+
+/* Add another complete token block and registry definition to introduce a template.
+   Keep every preset self-contained; never inject CSS or URLs from browser storage. */
+:root[data-template="navy"] {
+  --paper: #f3f5f8;
+  --white: #ffffff;
+  --ink: #21354b;
+  --muted: #5c6c7e;
+  --forest: #172f4d;
+  --deep: #10233a;
+  --gold: #cad9e9;
+  --line: #d9e0e8;
+  --serif: 'Noto Sans TC','Microsoft JhengHei',sans-serif;
+  --sans: 'Noto Sans TC','Microsoft JhengHei',sans-serif;
+  --template-surface: #ffffff;
+  --template-panel: #e0e7f0;
+  --template-soft: #e9eef5;
+  --template-accent: #36587c;
+  --template-accent-soft: #dce5ef;
+  --template-secondary: #4e667f;
+  --template-on-brand: #f5f8fc;
+  --template-brand-muted: #bacce0;
+  --template-radius: 4px;
+  --template-control-radius: 3px;
+  --template-hero-filter: saturate(.3);
+  --template-hero-tint: linear-gradient(90deg,#102640d9,#172f4d55 85%),linear-gradient(0deg,#142f4dc4,transparent 60%);
+  --template-shadow: #142b4930;
+  --template-overlay: #10233a88;
+}
+:root[data-template="ivory"] {
+  --paper: #faf7f1;
+  --white: #fffdf9;
+  --ink: #443a31;
+  --muted: #75675b;
+  --forest: #493b32;
+  --deep: #342921;
+  --gold: #e7cda7;
+  --line: #e3d9cd;
+  --serif: 'Noto Serif TC','PMingLiU',serif;
+  --sans: 'Noto Sans TC','Microsoft JhengHei',sans-serif;
+  --template-surface: #fffdf9;
+  --template-panel: #ede3d4;
+  --template-soft: #f1eade;
+  --template-accent: #7a5736;
+  --template-accent-soft: #ecdfca;
+  --template-secondary: #786751;
+  --template-on-brand: #fcf6eb;
+  --template-brand-muted: #d7cabb;
+  --template-radius: 16px;
+  --template-control-radius: 9px;
+  --template-hero-filter: saturate(.28) sepia(.4);
+  --template-hero-tint: linear-gradient(90deg,#382b22cf,#493b3240 85%),linear-gradient(0deg,#382b22b8,transparent 60%);
+  --template-shadow: #493b3229;
+  --template-overlay: #34292180;
+}
+
+/* Shared template-aware components. The approved green design keeps its original
+   colors; alternate templates replace component colors, typography and geometry. */
+html[data-template]:not([data-template="clubhouse"]) .sidebar { color:var(--template-on-brand); }
+html[data-template]:not([data-template="clubhouse"]) :is(.brand small,.sidebar-heading,.nav-link.active,.nav-count,.club-motto p) { color:var(--gold); }
+html[data-template]:not([data-template="clubhouse"]) :is(.sidebar-heading span,.nav-link,.sidebar-label,.club-motto>span:last-child,.admin-link,.account small) { color:var(--template-brand-muted); }
+html[data-template]:not([data-template="clubhouse"]) .account { background:var(--deep); }
+html[data-template]:not([data-template="clubhouse"]) :is(.motto-rule,.nav-dash,.notification-dot) { background:var(--gold); }
+html[data-template]:not([data-template="clubhouse"]) .avatar { color:var(--forest);background:var(--gold); }
+html[data-template]:not([data-template="clubhouse"]) :is(.topbar,.service,.detail-list-row,.profile-form input,.profile-form select,.skip-link) { background:var(--template-surface); }
+html[data-template]:not([data-template="clubhouse"]) :is(.breadcrumb strong,.light-button) { color:var(--ink); }
+html[data-template]:not([data-template="clubhouse"]) :is(.breadcrumb,.breadcrumb>span,.guide-button,.eyebrow,.today,.today small,.member-card-top .eyebrow,.member-salutation,.member-stats strong>span,.member-stats button>span,.service small,.section-count,.text-button,.filter,.category,.open-label,.event-meta,.news-meta,.news-type,.news-item>p,.news-read,.page-footer,.footer-divider,.dialog-subtitle,.dialog-note,.detail-facts dt,.detail-copy,.detail-list-row small,.profile-form label,.dialog-footnote) { color:var(--muted); }
+html[data-template]:not([data-template="clubhouse"]) :is(.today>i,.service-icon,.mini-avatar,.empty-state) { background:var(--template-soft);color:var(--template-secondary); }
+html[data-template]:not([data-template="clubhouse"]) :is(.member-card,.detail-facts) { background:var(--template-panel); }
+html[data-template]:not([data-template="clubhouse"]) :is(.hero,.member-card,dialog) { border-radius:var(--template-radius); }
+html[data-template]:not([data-template="clubhouse"]) :is(.service,.light-button,.primary-button,.detail-list-row,.filter,.profile-form input,.profile-form select) { border-radius:var(--template-control-radius); }
+html[data-template]:not([data-template="clubhouse"]) :is(.member-stats>button+button,.member-card-footer,.round-arrow,.open-label,.profile-form input,.profile-form select,dialog) { border-color:var(--line); }
+html[data-template]:not([data-template="clubhouse"]) :is(.service:hover,.round-arrow) { border-color:var(--template-secondary); }
+html[data-template]:not([data-template="clubhouse"]) :is(.service>i:last-child,.member-card-top>i,.round-arrow,.news-item:hover>strong) { color:var(--template-secondary); }
+html[data-template]:not([data-template="clubhouse"]) :is(.icon-button:hover,.filter:not(.active):hover,.event-row:hover) { background:var(--template-soft); }
+html[data-template]:not([data-template="clubhouse"]) .filter.active { color:var(--template-on-brand); }
+html[data-template]:not([data-template="clubhouse"]) .event-date { background:var(--template-accent-soft);color:var(--template-accent); }
+html[data-template]:not([data-template="clubhouse"]) :is(.event-date.olive,.event-date.forest) { background:var(--template-panel);color:var(--template-secondary); }
+html[data-template]:not([data-template="clubhouse"]) .tiny-avatars b { background:var(--template-accent-soft);color:var(--ink); }
+html[data-template]:not([data-template="clubhouse"]) .tiny-avatars b:nth-child(2) { background:var(--template-panel); }
+html[data-template]:not([data-template="clubhouse"]) .tiny-avatars b:nth-child(3) { background:var(--template-soft); }
+html[data-template]:not([data-template="clubhouse"]) .news-type.pinned { color:var(--template-accent); }
+html[data-template]:not([data-template="clubhouse"]) .hero { background:var(--forest); }
+html[data-template]:not([data-template="clubhouse"]) .hero-image { filter:var(--template-hero-filter); }
+html[data-template]:not([data-template="clubhouse"]) .hero-tint { background:var(--template-hero-tint); }
+html[data-template]:not([data-template="clubhouse"]) :is(.hero-edition,.hero-content>p:not(.hero-kicker),.hero-bottom,.hero-page>span) { color:var(--template-on-brand); }
+html[data-template]:not([data-template="clubhouse"]) .hero-kicker { color:var(--gold); }
+html[data-template]:not([data-template="clubhouse"]) .hero-tag { background:transparent; }
+html[data-template]:not([data-template="clubhouse"]) .light-button { background:var(--template-surface); }
+html[data-template]:not([data-template="clubhouse"]) .light-button:hover { background:var(--template-accent-soft); }
+html[data-template]:not([data-template="clubhouse"]) .primary-button:hover { background:var(--deep); }
+html[data-template]:not([data-template="clubhouse"]) :is(.detail-list-row .pill,.dialog-confirmation) { background:var(--template-soft);color:var(--template-secondary); }
+html[data-template]:not([data-template="clubhouse"]) .detail-list-row .pill.amber { background:var(--template-accent-soft);color:var(--template-accent); }
+html[data-template]:not([data-template="clubhouse"]) .toast { border-color:var(--gold);box-shadow:0 8px 25px var(--template-shadow); }
+html[data-template]:not([data-template="clubhouse"]) dialog { box-shadow:0 24px 90px var(--template-shadow); }
+html[data-template]:not([data-template="clubhouse"]) dialog::backdrop { background:var(--template-overlay); }
+html[data-template]:not([data-template="clubhouse"]) .sidebar-shade { background:var(--template-overlay); }
+html[data-template]:not([data-template="clubhouse"]) :is(button,a,input,select):focus-visible { outline-color:var(--template-accent); }
+
+/* Always-available template picker. Native dialog/radio semantics, no inline CSS. */
+.template-trigger { display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:var(--template-control-radius);font-size:.875rem;white-space:nowrap;background:var(--template-surface); }
+.template-trigger:hover { background:var(--template-soft);border-color:var(--template-secondary); }
+.template-trigger svg { width:17px;height:17px; }
+#template-dialog { padding-bottom:24px;max-height:calc(100dvh - 32px); }
+.template-options { display:grid;gap:12px;border:0;padding:0;margin:20px 0;min-width:0; }
+.template-option { position:relative;display:grid;grid-template-columns:24px 96px minmax(0,1fr);align-items:center;gap:14px;border:1px solid var(--line);border-radius:10px;padding:16px 14px;cursor:pointer; }
+.template-option:has(input:checked) { border-color:var(--forest);box-shadow:inset 0 0 0 1px var(--forest);background:var(--template-soft); }
+.template-option input { width:20px;height:20px;accent-color:var(--forest);margin:0; }
+.template-option:focus-within { outline:3px solid var(--template-accent);outline-offset:3px; }
+.template-option input:focus-visible { outline:0; }
+.template-option-text strong { display:block;font-size:1rem;font-weight:600; }
+.template-option-text small { display:block;font-size:.875rem;line-height:1.65;color:var(--muted);margin-top:5px; }
+.template-preview { height:70px;width:96px;position:relative;overflow:hidden;border:1px solid #00000015;border-radius:5px;background:var(--preview-paper); }
+.preview-rail { position:absolute;inset:0 auto 0 0;width:21px;background:var(--preview-brand); }
+.preview-hero { position:absolute;left:27px;right:26px;top:13px;height:27px;background:var(--preview-brand);border-radius:2px;opacity:.8; }
+.preview-card { position:absolute;right:6px;top:13px;width:16px;height:27px;background:var(--preview-panel);border-radius:2px; }
+.preview-line { position:absolute;left:27px;right:6px;top:46px;height:10px;border-block:2px solid var(--preview-panel); }
+[data-template-option="clubhouse"] { --preview-brand:#163c35;--preview-paper:#f7f8f4;--preview-panel:#d8cbae; }
+[data-template-option="navy"] { --preview-brand:#172f4d;--preview-paper:#f3f5f8;--preview-panel:#cad9e9; }
+[data-template-option="ivory"] { --preview-brand:#493b32;--preview-paper:#faf7f1;--preview-panel:#e7cda7; }
+.template-note { font-size:.875rem;line-height:1.8;color:var(--muted); }
+.template-status { font-size:.875rem;line-height:1.8;margin-top:12px;color:var(--ink); }
+.template-status:empty { display:none; }
+.template-actions { display:flex;align-items:center;gap:12px;margin-top:24px; }
+.template-actions .primary-button { margin:0;flex:1;min-height:44px; }
+.template-reset { flex:1;border:1px solid var(--line);border-radius:var(--template-control-radius);min-height:44px;font-size:.875rem;padding:10px; }
+.template-reset:hover { background:var(--template-soft); }
+@media(max-width:760px) { .top-actions{gap:10px}.template-trigger{padding:7px 10px} }
+@media(max-width:480px) {
+  .breadcrumb{display:none}.top-actions{margin-left:auto}.topbar{min-height:68px;height:auto;padding-block:10px}
+  .template-option{grid-template-columns:22px minmax(0,1fr);gap:10px;padding:14px 12px}
+  .template-preview{grid-column:2;grid-row:1;margin-bottom:3px}.template-option input{grid-column:1;grid-row:1 / span 2;align-self:center}
+  .template-option-text{grid-column:2}.template-actions{flex-wrap:wrap}.template-actions>*{min-width:120px}
+}
+@media(forced-colors:active) { .template-option:has(input:checked){border:3px solid Highlight}.template-option input{appearance:auto} }
