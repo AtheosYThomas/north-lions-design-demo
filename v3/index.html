@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#111110">
+  <meta name="description" content="北大獅子會會員入口設計提案。活動、會務與會員服務，從這裡開始。所有資料皆為示意。">
+  <title>北大獅子會 — WE SERVE.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要內容</a>
+  <header class="site-header">
+    <a class="brand" href="#main" aria-label="北大獅子會首頁"><img src="../v1/assets/lions-logo.png" width="46" height="46" alt=""><span>北大獅子會<small>NORTH LIONS CLUB</small></span></a>
+    <nav class="desktop-nav" aria-label="主要導覽"><a href="#gatherings">活動</a><button data-panel="members">獅友</button><a href="#club-notes">會務</a><button data-panel="billing">帳務</button></nav>
+    <div class="header-actions"><span class="demo-label">DESIGN DEMO 03</span><button class="icon-button" data-panel="notifications" aria-label="查看通知"><i data-icon="bell"></i><span class="notification-count">2</span></button><button class="profile-button" data-panel="profile"><span class="avatar">示</span><span class="profile-name">示範會員</span></button><button class="icon-button menu-button" id="menu-button" aria-controls="sidebar" aria-expanded="false" aria-label="展開導覽選單"><i data-icon="menu"></i></button></div>
+  </header>
+  <div id="sidebar-shade" class="sidebar-shade" hidden></div>
+  <aside id="sidebar" class="mobile-menu" aria-label="行動版導覽"><p class="menu-eyebrow">CLUB DIRECTORY</p><nav class="main-nav"><a href="#main">回到首頁</a><a href="#gatherings">參與活動</a><button data-panel="members">會員名冊</button><a href="#club-notes">最新公告</a><button data-panel="billing">專屬帳單</button><button data-panel="receipts">專屬收據</button><button data-panel="donations">捐款與繳費</button><button data-panel="profile">個人設定</button><button data-panel="admin">管理後台</button><button data-panel="guide">使用指南</button></nav></aside>
+
+  <main id="main">
+    <section class="club-stage" aria-labelledby="stage-title">
+      <div class="stage-topline"><p>我們服務。在這裡，一起。</p><span>TAIPEI, TAIWAN <b>／</b> 2026—27</span></div>
+      <div class="stage-art" aria-hidden="true"></div>
+      <div class="stage-copy"><p class="overline"><span class="line"></span> THE POWER OF TOGETHER</p><h1 id="stage-title">WE<br><span>SERVE<span class="gold-period">.</span></span></h1><p class="stage-caption">讓每一份善意，<br class="mobile-only">都有力量。</p></div>
+      <div class="edition-mark" aria-hidden="true"><span>N° 03</span><small>NORTH LIONS<br>MEMBER EXPERIENCE</small></div>
+      <div class="member-bar"><p><span>WELCOME BACK</span><strong>示範會員，今天想參與什麼？</strong></p><div class="member-stats"><button data-panel="my-events"><strong>02<span>場</span></strong><span>我的活動</span><i data-icon="diagonal"></i></button><button data-panel="billing"><strong>01<span>筆</span></strong><span>待處理帳單</span><i data-icon="diagonal"></i></button></div></div>
+      <button class="next-meeting" data-event="meeting"><span class="next-label">下一場相聚 <i data-icon="diagonal"></i></span><span class="meeting-date"><b>18</b><span>SEP<br>FRIDAY</span></span><strong>九月例會</strong><span class="meeting-meta">18:30 · 三峽北大特區</span></button>
+    </section>
+
+    <nav class="service-ribbon" aria-label="會員常用服務"><button data-panel="members"><span class="service-number">01</span><span>找到獅友<small>MEMBER DIRECTORY</small></span><i data-icon="users"></i></button><button data-panel="all-events"><span class="service-number">02</span><span>參與活動<small>GET TOGETHER</small></span><i data-icon="calendar"></i></button><button data-panel="billing"><span class="service-number">03</span><span>我的帳務<small>PERSONAL ACCOUNT</small></span><i data-icon="wallet"></i></button><button data-panel="receipts"><span class="service-number">04</span><span>專屬收據<small>MY RECEIPTS</small></span><i data-icon="receipt"></i></button></nav>
+
+    <section class="gatherings section-shell" id="gatherings" aria-labelledby="gatherings-title">
+      <div class="section-heading"><div><p class="overline">GOOD PEOPLE. GOOD THINGS.</p><h2 id="gatherings-title">把時間，<span>留給好事。</span></h2></div><button class="text-link" data-panel="my-events">我的活動 <i data-icon="diagonal"></i></button></div>
+      <div class="filter-row"><div class="event-filters" role="group" aria-label="活動類型"><button class="active" data-filter="all" aria-pressed="true">全部活動 <span>03</span></button><button data-filter="meeting" aria-pressed="false">每月例會</button><button data-filter="service" aria-pressed="false">公益服務</button><button data-filter="social" aria-pressed="false">獅友情誼</button></div><p>SEPTEMBER — OCTOBER 2026</p></div><p class="sr-only" id="filter-result" role="status">顯示 3 場全部活動</p>
+      <div class="event-layout">
+        <button class="event-card feature-event" data-category="social" data-event="social"><img src="../v1/assets/mountains.jpg" alt="晨光中的山巒" width="1400" height="933" loading="lazy"><div class="feature-event-top"><span class="category-label">獅友情誼</span><span class="event-status open">開放報名</span></div><div class="feature-event-copy"><p>OCT 04 / SUNDAY</p><h3>走進山裡。<br>走近彼此。</h3><span>08:30 · 三峽近郊步道</span></div><span class="round-arrow"><i data-icon="diagonal"></i></span></button>
+        <div class="event-list"><button class="event-card list-event" data-category="meeting" data-event="meeting"><span class="event-date"><b>18</b><span>SEP / FRI</span></span><span class="list-event-copy"><span class="category-label">每月例會</span><h3>把好事<br>聚在一起。</h3><span>18:30 · 三峽北大特區</span></span><span class="event-status">已加入</span><i class="list-arrow" data-icon="diagonal"></i></button><button class="event-card list-event" data-category="service" data-event="service"><span class="event-date"><b>26</b><span>SEP / SAT</span></span><span class="list-event-copy"><span class="category-label">公益服務</span><h3>一個上午，<br>更好的社區。</h3><span>09:00 · 三峽社區</span></span><span class="event-status">已加入</span><i class="list-arrow" data-icon="diagonal"></i></button></div>
+      </div>
+      <p class="section-footnote">活動日期、地點與報名狀態皆為示意；山景照片為氛圍配圖。</p>
+    </section>
+
+    <section class="notes-section section-shell" id="club-notes" aria-labelledby="notes-title"><div class="notes-intro"><p class="overline">THE CLUB EDIT</p><h2 id="notes-title">會裡，<br>正在發生。</h2><button class="text-link" data-panel="announcements">全部公告 <i data-icon="diagonal"></i></button><span class="large-asterisk" aria-hidden="true">✳</span></div><div class="notes-list"><button data-announcement="year"><span class="note-date">09.08<small>會務公告</small></span><h3>新年度，一起寫下<br>新的服務篇章。</h3><i data-icon="diagonal"></i></button><button data-announcement="fee"><span class="note-date">09.05<small>繳費提醒</small></span><h3>本期會費繳納<br>與收據申請說明。</h3><i data-icon="diagonal"></i></button><button data-announcement="profile"><span class="note-date">09.01<small>會員服務</small></span><h3>別忘了，<br>更新你的聯絡資訊。</h3><i data-icon="diagonal"></i></button></div></section>
+    <section class="club-desk section-shell" aria-label="更多會員服務"><span>YOUR CLUB, CONNECTED.</span><div><button data-panel="donations">捐款與繳費明細</button><button data-panel="profile">個人設定</button><button data-panel="admin">管理後台</button><button data-panel="guide">使用指南</button></div></section>
+  </main>
+  <footer class="site-footer"><p>NORTH LIONS<span>WE SERVE.</span></p><div><span>北大獅子會 · 入口設計提案</span><a href="../index.html">比較三版設計 <i data-icon="diagonal"></i></a><small>所有資料皆為示意，不連接正式系統。</small></div></footer>
+  <nav class="mobile-dock" aria-label="手機快捷服務"><a class="active" href="#main"><i data-icon="home"></i><span>首頁</span></a><a href="#gatherings"><i data-icon="calendar"></i><span>活動</span></a><button data-panel="members"><i data-icon="users"></i><span>獅友</span></button><button data-panel="billing"><i data-icon="wallet"></i><span>帳務</span></button></nav>
+  <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-topbar"><span id="dialog-kicker">NORTH LIONS / CLUB DESK</span><button class="icon-button" id="dialog-close" aria-label="關閉視窗"><i data-icon="close"></i></button></div><div id="dialog-content"></div></dialog><div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
