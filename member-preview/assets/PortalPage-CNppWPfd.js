@@ -1,0 +1,1 @@
+import{G as e,X as t,ft as n,it as r,j as i,lt as a,nt as o,ot as s}from"./index-Ak9d9j1d.js";var c=t({__name:`PortalPage`,props:{kind:{}},setup(t){let c=i();return(i,l)=>(o(),e(s(n(c).Page),{kind:t.kind},{default:a(()=>[r(i.$slots,`default`)]),_:3},8,[`kind`]))}});export{c as t};
