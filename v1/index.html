@@ -1,18 +1,19 @@
 <!doctype html>
-<html lang="zh-Hant" data-template="clubhouse">
+<html lang="zh-Hant" data-site-theme="v1">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#163c35">
-  <meta name="description" content="北大獅子會會員會所：以墨綠精品為預設，可隨時切換的主題模板展示。">
+  <meta name="description" content="北大獅子會會員會所：以墨綠精品為預設，可切換第一、二、三版完整網站主題。">
   <title>北大獅子會 · 會員會所｜Design Demo</title>
   <link rel="icon" href="./assets/lions-logo.png">
   <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./themes.css">
-  <script src="./templates.js"></script>
-  <script src="./app.js" defer></script>
-  <script src="./template-picker.js" defer></script>
+  <link rel="stylesheet" href="../shared/theme-picker.css">
+  <script src="../shared/theme-catalog.js" defer></script><script src="../shared/themes.js" defer></script>
+  <script src="../shared/demo-state.js" defer></script>
+  <script src="../shared/app.js" defer></script>
+  <script src="../shared/theme-picker.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳至主要內容</a>
@@ -47,7 +48,7 @@
     <header class="topbar">
       <button class="icon-button mobile-menu" id="menu-button" aria-label="展開導覽選單" aria-controls="sidebar" aria-expanded="false"><i data-icon="menu"></i></button>
       <div class="breadcrumb">會員會所 <span>/</span> <strong>首頁</strong></div>
-      <div class="top-actions"><button class="template-trigger" id="template-trigger" aria-haspopup="dialog" aria-controls="template-dialog"><i data-icon="sparkle"></i><span>更換模板</span></button><button class="guide-button" data-panel="guide"><i data-icon="help"></i><span>使用指南</span></button><span class="top-divider"></span><button class="icon-button notification" data-panel="notifications" aria-label="通知，2 則新消息"><i data-icon="bell"></i><span class="notification-dot"></span></button><button class="avatar small" data-panel="profile" aria-label="查看個人資料">獅</button></div>
+      <div class="top-actions"><button class="layout-theme-trigger" id="layout-theme-trigger" aria-haspopup="dialog" aria-controls="layout-theme-dialog"><i data-icon="sparkle"></i><span>切換主題</span></button><button class="guide-button" data-panel="guide"><i data-icon="help"></i><span>使用指南</span></button><span class="top-divider"></span><button class="icon-button notification" data-panel="notifications" aria-label="通知，2 則新消息"><i data-icon="bell"></i><span class="notification-dot"></span></button><button class="avatar small" data-panel="profile" aria-label="查看個人資料">獅</button></div>
     </header>
 
     <main id="main">
@@ -103,14 +104,5 @@
 
   <dialog id="detail-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="eyebrow" id="dialog-kicker">MEMBER'S LOUNGE</span><button class="icon-button" id="dialog-close" aria-label="關閉視窗"><i data-icon="close"></i></button></div><div id="dialog-content"></div><div class="dialog-note"><i data-icon="info"></i><span>互動展示使用示意資料，操作僅於本頁預覽。</span></div></dialog>
   <div class="toast" id="toast" role="status" hidden></div>
-  <dialog id="template-dialog" aria-labelledby="template-title" aria-describedby="template-description">
-    <div class="dialog-top"><span class="eyebrow">LOUNGE TEMPLATES</span><button class="icon-button" id="template-close" aria-label="關閉模板設定"><i data-icon="close"></i></button></div>
-    <h2 class="dialog-title" id="template-title">換個樣子，依然熟悉。</h2>
-    <p id="template-description" class="dialog-subtitle">共用同一套功能，選擇你喜歡的會所風格。</p>
-    <fieldset class="template-options" id="template-options"><legend class="sr-only">選擇會所模板</legend></fieldset>
-    <p class="template-note">只記住這個瀏覽器的外觀偏好，不變更會員、活動或帳務資料。</p>
-    <p class="template-status" id="template-status" role="status" aria-live="polite"></p>
-    <div class="template-actions"><button class="template-reset" id="template-reset">還原墨綠預設</button><button class="primary-button" id="template-apply">套用模板</button></div>
-  </dialog>
 </body>
 </html>

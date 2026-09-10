@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" data-site-theme="v2">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
@@ -9,7 +9,11 @@
   <title>NORTH LIONS / 一起，把好事放大。｜Demo 02</title>
   <link rel="icon" href="./assets/lions-logo.png">
   <link rel="stylesheet" href="./styles.css">
-  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="../shared/theme-picker.css">
+  <script src="../shared/theme-catalog.js" defer></script><script src="../shared/themes.js" defer></script>
+  <script src="../shared/demo-state.js" defer></script>
+  <script src="../shared/app.js" defer></script>
+  <script src="../shared/theme-picker.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">跳至主要內容</a>
@@ -18,7 +22,7 @@
     <div class="header-inner">
       <a class="brand" href="#home" aria-label="北大獅子會首頁"><img src="./assets/lions-logo.png" alt="獅子會會徽" width="45" height="45"><span><strong>NORTH LIONS<span class="brand-period">.</span></strong><small>北大獅子會 · 會員俱樂部</small></span></a>
       <nav class="main-nav" id="sidebar" aria-label="主要導覽"><a class="active" href="#home" aria-current="page">首頁</a><button data-panel="members">會員名冊</button><a href="#events">活動報名<span class="nav-count">3</span></a><a href="#news">最新公告</a><button data-panel="donations">捐款明細</button><button class="mobile-extra" data-panel="admin">管理後台</button><button class="mobile-extra" data-panel="guide">使用指南</button></nav>
-      <div class="header-tools"><button class="icon-button notification" data-panel="notifications" aria-label="通知，2 則新消息"><i data-icon="bell"></i><span class="notification-dot"></span></button><button class="profile-button" data-panel="profile"><span class="avatar">獅</span><span>示範會員</span><i data-icon="chevron"></i></button><button class="icon-button mobile-menu" id="menu-button" aria-controls="sidebar" aria-expanded="false" aria-label="展開導覽選單"><i data-icon="menu"></i></button></div>
+      <div class="header-tools"><button class="layout-theme-trigger" id="layout-theme-trigger" aria-haspopup="dialog" aria-controls="layout-theme-dialog"><i data-icon="sparkle"></i><span>切換主題</span></button><button class="icon-button notification" data-panel="notifications" aria-label="通知，2 則新消息"><i data-icon="bell"></i><span class="notification-dot"></span></button><button class="profile-button" data-panel="profile"><span class="avatar">獅</span><span>示範會員</span><i data-icon="chevron"></i></button><button class="icon-button mobile-menu" id="menu-button" aria-controls="sidebar" aria-expanded="false" aria-label="展開導覽選單"><i data-icon="menu"></i></button></div>
     </div>
   </header>
 

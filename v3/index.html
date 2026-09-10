@@ -1,14 +1,18 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="zh-Hant" data-site-theme="v3">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080a10">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
 <title>北大獅子會｜LIONS UNITE.</title><meta name="description" content="北大獅子會會員入口設計：互動立體核心、活動與會員服務。所有資料皆為示意，不連接正式系統。">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./styles.css"><script src="./app.js" defer></script><script src="./core.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="../shared/theme-picker.css"><script src="../shared/theme-catalog.js" defer></script><script src="../shared/themes.js" defer></script>
+  <script src="../shared/demo-state.js" defer></script>
+  <script src="../shared/app.js" defer></script>
+  <script src="../shared/theme-picker.js" defer></script><script src="./core.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">跳至主要內容</a>
-<header class="site-header"><a class="brand" href="#main"><img src="../v1/assets/lions-logo.png" width="40" height="40" alt=""><span>北大獅子會<small>NORTH LIONS CLUB</small></span></a><nav class="desktop-nav" aria-label="主要導覽"><a class="current" href="#main">首頁</a><a href="#events">活動</a><button data-panel="members">獅友</button><a href="#notes">公告</a></nav><div class="header-actions"><button class="notify icon-button" data-panel="notifications" aria-label="兩則通知"><i data-icon="bell"></i><span>2</span></button><button class="user-button" data-panel="profile"><span class="user-avatar">示</span><span>示範會員</span><i data-icon="chevron"></i></button><button id="menu-button" class="icon-button menu-button" aria-expanded="false" aria-controls="sidebar" aria-label="展開導覽選單"><i data-icon="menu"></i></button></div></header>
+<header class="site-header"><a class="brand" href="#main"><img src="../v1/assets/lions-logo.png" width="40" height="40" alt=""><span>北大獅子會<small>NORTH LIONS CLUB</small></span></a><nav class="desktop-nav" aria-label="主要導覽"><a class="current" href="#main">首頁</a><a href="#events">活動</a><button data-panel="members">獅友</button><a href="#notes">公告</a></nav><div class="header-actions"><button class="layout-theme-trigger" id="layout-theme-trigger" aria-haspopup="dialog" aria-controls="layout-theme-dialog"><i data-icon="sparkle"></i><span>切換主題</span></button><button class="notify icon-button" data-panel="notifications" aria-label="兩則通知"><i data-icon="bell"></i><span>2</span></button><button class="user-button" data-panel="profile"><span class="user-avatar">示</span><span>示範會員</span><i data-icon="chevron"></i></button><button id="menu-button" class="icon-button menu-button" aria-expanded="false" aria-controls="sidebar" aria-label="展開導覽選單"><i data-icon="menu"></i></button></div></header>
 <div id="sidebar-shade" class="sidebar-shade" hidden></div><aside id="sidebar" class="mobile-menu" aria-label="行動導覽"><span class="eyebrow">YOUR CLUB / CONNECTED</span><nav class="main-nav"><a href="#main">首頁</a><a href="#events">活動報名</a><button data-panel="members">會員名冊</button><a href="#notes">最新公告</a><button data-panel="billing">專屬帳單</button><button data-panel="receipts">專屬收據</button><button data-panel="donations">捐款與繳費明細</button><button data-panel="profile">個人設定</button><button data-panel="admin">管理後台</button><button data-panel="guide">使用指南</button></nav></aside>
 <main id="main">
   <section class="hero" aria-labelledby="hero-title">
